@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Radio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-900 text-white flex flex-col items-center justify-start min-h-screen p-6"
+  >
+    <h1 class="text-3xl font-bold mb-4 flex items-center gap-2">
+      <i class="fas fa-radio fa-lg"></i> Web Radio
+    </h1>
+
+    <div
+      class="bg-gray-800 p-4 rounded shadow-lg w-full max-w-lg flex items-center justify-between mb-6"
+    >
+      <div id="currentStation" class="truncate">No station selected</div>
+      <audio id="radioPlayer" controls class="ml-4 w-40"></audio>
+    </div>
+
+    <div
+      class="mb-6 flex flex-col sm:flex-row gap-4 items-center w-full max-w-lg"
+    >
+      <input
+        type="text"
+        id="countryInput"
+        placeholder="Enter country"
+        class="px-4 py-2 rounded text-black flex-1"
+      />
+      <button
+        id="fetchBtn"
+        class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded flex items-center gap-2"
+      >
+        <i class="fas fa-magnifying-glass"></i> Get Stations
+      </button>
+    </div>
+
+    <div
+      id="stationsList"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-4xl mb-4"
+    ></div>
+
+    <button
+      id="loadMoreBtn"
+      class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded mb-6 hidden flex items-center gap-2"
+    >
+      <i class="fas fa-arrow-down"></i> Load More
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
