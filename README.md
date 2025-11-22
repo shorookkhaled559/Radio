@@ -89,7 +89,7 @@ Radio/
 
 1. Clone this repository:  
 \`\`\`bash
-git clone https://github.com/yourusername/Radio.git
+git clone https://github.com/shorookkhaled559/Radio
 \`\`\`
 2. Navigate to the project folder:  
 \`\`\`bash
